@@ -10,3 +10,6 @@ Code for paper: "Region Proposals for Saliency Map Refinement for Weakly-supervi
 
 ## Install
 `pip install git+https://github.com/renato145/RpSalWeaklyDet.git`
+
+## Trained models
+https://drive.google.com/file/d/1KVAZnwnTwiESg7FPmNCwmbpeGgkn9eqG/view?usp=sharing
