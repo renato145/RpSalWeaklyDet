@@ -151,7 +151,7 @@ def get_detection_model(arch:Callable, c:int, img_sz:int, crop_arch:Optional[Cal
 def get_detection_learner(data:DataBunch, arch:Callable, crop_arch:Optional[Callable]=None, pretrained:bool=True, crop_sz:int=64,
                           act_mode:ActMode=ActMode.LeakyRelu, 
                           backbone_kwargs:Optional[dict]=None, model_kwargs:Optional[dict]=None, **kwargs:Any)->Learner:
-    img_sz = data.x[0].size[0]
+    img_sz = data.train_ds.tfmargs['size']
     model_kwargs = ifnone(model_kwargs, dict())
     model = get_detection_model(arch=arch, c=data.c-1, img_sz=img_sz, crop_arch=crop_arch, pretrained=pretrained, crop_sz=crop_sz,
                                 act_mode=act_mode, backbone_kwargs=backbone_kwargs, **model_kwargs)
