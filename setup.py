@@ -20,5 +20,5 @@ setuptools.setup(
     url="https://github.com/renato145/rpsalweaklydet",
     install_requires=requirements,
     python_requires='>=3.6',
-    packages=['rpsalweaklydet'],
+    packages=setuptools.find_packages(),
 )
